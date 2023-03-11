@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Yêu cầu người dùng nhập tên từ bàn phím. 
+● Nếu tên nhập vào là Admin thì yêu cầu nhập mật khẩu.
+o Nếu mật khẩu là TheMaster thì in ra chuỗi Welcome.
+o Nếu mật khẩu nhập vào là null in ra chuỗi Canceled.
+o Còn lại in ra chuỗi Wrong password. 
+● Nếu tên nhập vào là null in ra chuỗi Canceld.
+● Còn lại in ra chuỗi "I don’t know you" -->
+<script>
+    let name = prompt('Hãy nhập tên vào đây !')
+    switch (name) {
+        case 'Admin': let passWord = prompt('Hãy nhập mật khẩu')
+            if (passWord == 'TheMaster'){
+                console.log('Welcome');
+            }else if(passWord == null){
+            console.log('Canceled');
+            }
+            else {
+                console.log('Wrong password');
+            }
+            break;
+        case null:console.log('Canceled');
+        break;
+        default:
+            console.log("I don't know you");
+            break;
+    }
+</script>
+</body>
+</html>
